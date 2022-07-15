@@ -41,6 +41,6 @@ def search_entries(title):
     entries = list_entries()
     results = []
     for entry in entries:
-        if title in entry:
+        if title.lower() in entry.lower():
             results.append(entry)
     return results

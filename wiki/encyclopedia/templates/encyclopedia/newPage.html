@@ -5,14 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
+    <h1>Create a New Page</h1>
 
-    <ul>
-        {% for entry in entries %}
-            <li>
-                <a href="{% url 'TITLE' TITLE=entry %}">{{ entry }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <form method="post" >
+        {% csrf_token %}
+        {{ createPage }}
+        <input type="submit" value ="Create New Page" name = "Create New Page">
+    <h1>{{ confirm }}</h1>
 
 {% endblock %}

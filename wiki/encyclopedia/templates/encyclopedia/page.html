@@ -6,4 +6,5 @@
 
 {% block body %}
     {{ get_entry }}
+    <a href="{% url 'edit' title=TITLE %}">Edit This Page</a>
 {% endblock %}
